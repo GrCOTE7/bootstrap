@@ -63,16 +63,26 @@
     <!-- Main component for a primary marketing message or call to action -->
     <div class="jumbotron">
         <h1>Navbar example</h1>
-        <h2>
-            <mark>Complètement responsive</mark>
-        </h2>
+
+        <div class="alert alert-info" role="alert">
+            <button type="button" class="close closegc" data-dismiss="alert" aria-label="Close"
+                    title=" Fermer le message ">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h2 class="centered">
+                <mark>Complètement responsive</mark>
+            </h2>
+        </div>
+
         <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It
             includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
         <p>To see the difference between static and fixed top navbars, just scroll.</p>
         <p>
-            <a class="btn btn-lg btn-primary" href="#" role="button">View navbar docs &raquo;</a>
+            <a class="btn btn-lg btn-primary closegc" href="#" role="button">View navbar docs &raquo;</a>
         </p>
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur, aut impedit inventore nam neque, possimus quam quibusdam quis reiciendis sapiente suscipit unde? A, ab distinctio enim inventore sapiente soluta?</span><span>A aliquid autem, blanditiis consectetur delectus dignissimos ea eligendi error itaque laboriosam mollitia nobis nulla odit pariatur perferendis quas quidem, quo reiciendis repellat sint, sit soluta tempore vel voluptatem voluptates.</span><span>A accusamus, accusantium atque illum nemo reprehenderit unde voluptas. Amet blanditiis commodi dolorum, est, explicabo impedit incidunt ipsum necessitatibus nihil nisi rem repellendus sunt? Delectus eaque earum incidunt ipsam quae?</span>
+        <p><span class="closegc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur, aut
+            impedit inventore nam neque, possimus quam quibusdam quis reiciendis sapiente suscipit unde? A, ab
+            distinctio enim inventore sapiente soluta?</span><span>A aliquid autem, blanditiis consectetur delectus dignissimos ea eligendi error itaque laboriosam mollitia nobis nulla odit pariatur perferendis quas quidem, quo reiciendis repellat sint, sit soluta tempore vel voluptatem voluptates.</span><span>A accusamus, accusantium atque illum nemo reprehenderit unde voluptas. Amet blanditiis commodi dolorum, est, explicabo impedit incidunt ipsum necessitatibus nihil nisi rem repellendus sunt? Delectus eaque earum incidunt ipsam quae?</span>
         <!--</p>-->
     </div>
 
@@ -83,8 +93,13 @@
         <h1>Mon Offre</h1>
         <p class="centerred">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti earum illo incidunt
             laborum magnam.</p>
-        <p class="left"><a class="btn bg-primary" href="#" role="button">Link</a></p>
+        <p><img class="illustration closegc" src="http://lorempixum.com/640/300/business/" alt=""></p>
+        <p class="left"><a class="btn bg-primary closegc" href="#" role="button">Link</a></p>
     </div>
+    <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
 </div>
 <div class="container">
     <div class="row jumbotron centered">
@@ -108,6 +123,14 @@
 </div>
 
 <script src="js/jquery1-11-3.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+    $('.closegc').on('click', function () {
+        $(this).parent().slideUp(5000, 'easeOutBounce');
+        return false;
+    })
+</script>
+
 </body>
 </html>

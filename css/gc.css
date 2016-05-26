@@ -41,6 +41,18 @@ p {
     text-align: center;
 }
 
+.illustration {
+    width: 100%;
+}
+
+blockquote {
+    width: 90%;
+    margin: 0 auto;
+    background-color: beige;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+}
 
 @media (max-width: 767px) {
     .navbar-fixed-top {
